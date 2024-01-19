@@ -1,0 +1,11 @@
+[Unit]
+Description=Server HTTP per gestire Wake-on-LAN  - Snakeice
+After=network.target
+
+[Service]
+ExecStart=/home/pi/wol/wol_server.elf
+WorkingDirectory=/home/pi/wol
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
